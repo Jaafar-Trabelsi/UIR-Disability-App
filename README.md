@@ -1,10 +1,14 @@
-# 🎓 UIR Disability App
-### University International Rabat — Disability Management Platform
+<div align="center">
+
+# 🎓 UIR Disability App  
+### University International Rabat — Disability Management Platform  
 
 ![Java](https://img.shields.io/badge/Java-Swing-orange?style=for-the-badge&logo=java)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
 ![NetBeans](https://img.shields.io/badge/IDE-NetBeans-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+
+</div>
 
 > A Java desktop application designed to streamline the management of requests and complaints from students with disabilities at the University International Rabat.
 
