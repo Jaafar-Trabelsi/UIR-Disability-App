@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2026 at 02:07 PM
+-- Generation Time: May 20, 2026 at 05:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -118,16 +118,17 @@ CREATE TABLE `utilisateur` (
   `pwdUtilisateur` varchar(255) NOT NULL,
   `nomUtilisateur` varchar(100) NOT NULL,
   `roleUtilisateur` enum('Etudiant','Admin') NOT NULL,
-  `statutCompte` enum('En attente','Validé','Refusé') DEFAULT 'En attente'
+  `statutCompte` enum('En attente','Validé','Refusé') DEFAULT 'En attente',
+  `dateInscription` date DEFAULT curdate()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`idUtilisateur`, `emailUtilisateur`, `pwdUtilisateur`, `nomUtilisateur`, `roleUtilisateur`, `statutCompte`) VALUES
-(1, 'admin@uir.ac.ma', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'Admin Principal', 'Admin', 'Validé'),
-(14, 'user@uir.ac.ma', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'user', 'Etudiant', 'Validé');
+INSERT INTO `utilisateur` (`idUtilisateur`, `emailUtilisateur`, `pwdUtilisateur`, `nomUtilisateur`, `roleUtilisateur`, `statutCompte`, `dateInscription`) VALUES
+(1, 'admin@uir.ac.ma', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'Admin Principal', 'Admin', 'Validé', '2026-05-20'),
+(14, 'user@uir.ac.ma', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'user', 'Etudiant', 'Validé', '2026-05-20');
 
 --
 -- Indexes for dumped tables
