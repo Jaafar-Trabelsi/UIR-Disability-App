@@ -12,31 +12,47 @@
 
 > A Java desktop application designed to streamline the management of requests and complaints from students with disabilities at the University International Rabat.
 
-</div>
-
 ---
 
 ## ⚙️ Quick Launch (IMPORTANT)
 
 To run the application:
 
-- Use the shortcut **Disability_App_Java**
-- It targets:
+### 📁 Locate the JAR file
 
+Go to this folder in your project:
+
+```
+
+target/
+
+```
+
+Then run:
+
+```
+
+devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+```
+
+---
+
+### ▶️ Run options:
+
+**Option 1 (File Explorer):**
+- Open the project folder
+- Go to `target/`
+- Double-click:
 ```
 
 devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ````
 
-### ▶️ Run options:
-
-**Option 1 (Easiest):**
-- Double-click `Disability_App_Java`
-
 **Option 2 (Terminal):**
 ```bash
-java -jar devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
 ````
 
 ---
@@ -225,7 +241,7 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 2. Create database `gestion_handicap_univ`
 3. Import `gestion_handicap_univ.sql`
 4. Open project in NetBeans
-5. Run project OR use shortcut
+5. Run project OR go to `target/` and run JAR
 
 ---
 
@@ -253,3 +269,6 @@ Made with ❤️ for UIR — Academic Year 2025/2026
 </div>
 ```
 
+---
+
+If you want next upgrade, I can make it look like a **professional GitHub project page (with download badge, demo GIF, and cleaner UI sections)**.
