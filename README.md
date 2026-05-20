@@ -1,14 +1,8 @@
 # 🎓 UIR Disability App
+
 ### University International Rabat — Disability Management Platform
 
-![Java](https://img.shields.io/badge/Java-Swing-orange?style=for-the-badge&logo=java)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
-![NetBeans](https://img.shields.io/badge/IDE-NetBeans-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
-
 > A Java desktop application designed to streamline the management of requests and complaints from students with disabilities at the University International Rabat.
-
-</div>
 
 ---
 
@@ -16,24 +10,35 @@
 
 To run the application:
 
-- Use the shortcut **Disability_App_Java**
-- It targets:
+* Use the shortcut **Disability_App_Java**
+* It targets:
 
 ```
 
 devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-````
+
+```
 
 ### ▶️ Run options:
 
 **Option 1 (Easiest):**
-- Double-click `Disability_App_Java`
+
+* Double-click `Disability_App_Java`
 
 **Option 2 (Terminal):**
+
 ```bash
 java -jar devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
-````
+
+```
+
+### 🔑 Default Credentials
+
+| Role | Email | Password |
+| --- | --- | --- |
+| **Admin** | admin@uir.ac.ma | admin123 |
+| **User** | user@uir.ac.ma | 123456 |
 
 ---
 
@@ -45,18 +50,21 @@ Make sure MySQL runs on:
 
 ```
 localhost:3306
+
 ```
 
 ### 2. Open phpMyAdmin
 
 ```
 http://localhost/phpmyadmin
+
 ```
 
 ### 3. Create database
 
 ```sql
 CREATE DATABASE gestion_handicap_univ;
+
 ```
 
 ### 4. Import SQL file
@@ -65,6 +73,7 @@ Import:
 
 ```
 gestion_handicap_univ.sql
+
 ```
 
 into **gestion_handicap_univ**
@@ -118,58 +127,36 @@ It provides:
 
 ### Login
 
-![Login](img/login.png)
-
 ### Forgot Password
 
-![Forgot Password](img/forgot_password.png)
-
 ### Register
-
-![Register](img/register.png)
 
 ---
 
 ### Admin Dashboard
 
-![Dashboard](img/dashboard_stats.png)
-
-![Requests](img/demandes_statut.png)
-
-![Complaints](img/reclamations_statut.png)
-
-![Users](img/comptes_utilisateurs.png)
-
 ---
 
 ### Admin Management
-
-![Manage Requests](img/gestion_demandes.png)
-
-![Manage Complaints](img/gestion_reclamations.png)
 
 ---
 
 ### Student Panel
 
-![My Complaints](img/mes_reclamations.png)
-
-![History](img/historique_etudiant.png)
-
 ---
 
 ## 🛠 Tech Stack
 
-| Layer        | Technology            |
-| ------------ | --------------------- |
-| Language     | Java (JDK 17+)        |
-| UI           | Java Swing            |
-| Database     | MySQL 8               |
-| DB Name      | gestion_handicap_univ |
-| Connection   | JDBC                  |
-| Architecture | MVC                   |
-| IDE          | NetBeans              |
-| Security     | SHA-256               |
+| Layer | Technology |
+| --- | --- |
+| Language | Java (JDK 17+) |
+| UI | Java Swing |
+| Database | MySQL 8 |
+| DB Name | gestion_handicap_univ |
+| Connection | JDBC |
+| Architecture | MVC |
+| IDE | NetBeans |
+| Security | SHA-256 |
 
 ---
 
@@ -183,6 +170,7 @@ gestion_handicap_univ
 ├── demande (idDemande, desc, date, type, statut, idEtudiant)
 ├── reclamation (idRecla, date, desc, statut, action, idEtudiant)
 └── piecejustificatif (idPiece, nom, desc, dateAjout, chemin, idDemande)
+
 ```
 
 ### Enums
@@ -197,6 +185,7 @@ gestion_handicap_univ
 
 ```bash
 git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
+
 ```
 
 ### Steps:
@@ -224,10 +213,6 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 
 * **Jaafar Trabelsi** — [GitHub](https://github.com/Jaafar-Trabelsi)
 * **conqueror31** — [GitHub](https://github.com/conqueror31)
-*  **rayan963** — [GitHub](https://github.com/rayan963)
+* **rayan963** — [GitHub](https://github.com/rayan963)
 
 ---
-
-<div align="center">
-Made with ❤️ for UIR — Academic Year 2025/2026
-</div>
