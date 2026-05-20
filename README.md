@@ -268,7 +268,3 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 Made with ❤️ for UIR — Academic Year 2025/2026
 </div>
 ```
-
----
-
-If you want next upgrade, I can make it look like a **professional GitHub project page (with download badge, demo GIF, and cleaner UI sections)**.
