@@ -211,7 +211,7 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 
 ---
 
-## 🚀 Usage Flow
+## Usage Flow
 
 1. Student registers
 2. Admin validates account
