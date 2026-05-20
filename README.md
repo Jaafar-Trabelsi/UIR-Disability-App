@@ -232,10 +232,4 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 <div align="center">
 Made with ❤️ for UIR — Academic Year 2025/2026
 </div>
-```
 
-If you want, I can next:
-
-* add **badges for download / release**
-* make it look like a **top-tier GitHub trending repo**
-* or convert it into a **portfolio project page (React + UI showcase)**
