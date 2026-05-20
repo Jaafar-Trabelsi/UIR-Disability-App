@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1920" height="1040" alt="image" src="https://github.com/user-attachments/assets/b0ffb08a-15bf-40e1-b028-3a2c57467ba8" /><div align="center">
 
 # 🎓 UIR Disability App
 ### University International Rabat — Disability Management Platform
@@ -224,8 +224,9 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 
 ## 👥 Authors
 
-* **Jaafar Trabelsi** — [https://github.com/Jaafar-Trabelsi](https://github.com/Jaafar-Trabelsi)
-* **conqueror31** — [https://github.com/conqueror31](https://github.com/conqueror31)
+* **Jaafar Trabelsi** — [GitHub](https://github.com/Jaafar-Trabelsi)
+* **conqueror31** — [GitHub](https://github.com/conqueror31)
+*  **rayan963** — [GitHub](https://github.com/rayan963)
 
 ---
 
