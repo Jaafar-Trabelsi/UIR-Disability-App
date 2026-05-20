@@ -1,5 +1,3 @@
-<img width="1920" height="1040" alt="image" src="https://github.com/user-attachments/assets/b0ffb08a-15bf-40e1-b028-3a2c57467ba8" /><div align="center">
-
 # 🎓 UIR Disability App
 ### University International Rabat — Disability Management Platform
 
