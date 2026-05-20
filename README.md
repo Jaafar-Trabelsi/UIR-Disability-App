@@ -16,23 +16,47 @@
 
 ## ⚙️ Quick Launch (IMPORTANT)
 
-To run the application:
+You can run the application in two ways:
 
-- Use the shortcut **Disability_App_Java**
-- It targets:
+### ✅ Option 1 (Recommended)
+Double-click the shortcut:
+
+```
+
+Disability_App_Java
+
+```id="launch01"
+
+This shortcut targets:
 
 ```
 
 devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-````
+```id="launch02"
 
-### ▶️ Run options:
+---
 
-**Option 1 (Easiest):**
-- Double-click `Disability_App_Java`
+### ⚠️ Option 2 (Manual Launch Path)
 
-**Option 2 (Terminal):**
+You MUST go to this folder:
+
+```
+
+C:\Users\jaafa\Desktop\Disability_App_Java\target
+
+```id="launch03"
+
+Then run:
+
+```
+
+devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+````id="launch04"
+
+Or execute via terminal:
+
 ```bash
 java -jar devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
 ````
@@ -41,98 +65,102 @@ java -jar devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ## 🗄 Database Setup (IMPORTANT)
 
+Before running the app, set up MySQL correctly:
+
 ### 1. Start MySQL
 
-Make sure MySQL runs on:
+Make sure MySQL is running on:
 
-```
+````
 localhost:3306
-```
+``` id="db01"
+
+---
 
 ### 2. Open phpMyAdmin
 
-```
-http://localhost/phpmyadmin
-```
+````
+
+[http://localhost/phpmyadmin](http://localhost/phpmyadmin)
+
+````id="db02"
+
+---
 
 ### 3. Create database
 
-```sql
+```sql id="db03"
 CREATE DATABASE gestion_handicap_univ;
-```
+````
+
+---
 
 ### 4. Import SQL file
 
 Import:
 
-```
+````
 gestion_handicap_univ.sql
-```
+``` id="db04"
 
-into **gestion_handicap_univ**
+into the database **gestion_handicap_univ**
 
 ---
 
 ## 🧾 Overview
 
-The **UIR Disability App** is a Java Swing desktop application built for the **2025/2026 academic year**.
+The **UIR Disability App** is a Java Swing desktop application developed for the **2025/2026 academic year**.
 
-It provides:
+It provides two main interfaces:
 
-* 👨‍💼 Admin panel (management system)
-* 🎓 Student panel (requests & complaints system)
+- 👨‍💼 **Admin panel** — manage users, requests, complaints, and statistics  
+- 🎓 **Student panel** — submit and track requests and complaints  
 
 ---
 
 ## ✨ Features
 
-### 🔐 Authentication
-
-* Login with email/password
-* Role-based access control
-* SHA-256 password encryption
-* Remember me (Java Preferences)
-* Forgot password (verification flow)
-* Student registration + disability info + PDF upload
+### 🔐 Authentication System
+- Login with email/password
+- Role-based access control (Admin / Student)
+- SHA-256 password encryption
+- Remember Me (Java Preferences)
+- Forgot Password (verification system)
+- Student registration with disability description + PDF upload
 
 ---
 
 ### 👨‍💼 Admin Features
-
-* Dashboard with statistics
-* Manage requests (validate / refuse / edit / export CSV)
-* Manage complaints (status + responses)
-* Manage accounts (validate / edit / delete)
-* Full history tracking
+- Dashboard with statistics (users, requests, complaints)
+- Manage requests (validate / refuse / edit / export CSV)
+- Manage complaints (status updates + responses)
+- Manage user accounts (validate / edit / delete)
+- Full history tracking system
 
 ---
 
 ### 🎓 Student Features
-
-* Submit requests (demandes)
-* Submit complaints (réclamations)
-* View personal history
-* Track status updates
+- Submit requests (demandes)
+- Submit complaints (réclamations)
+- Track request status
+- View personal history
 
 ---
 
 ## 📸 Screenshots
 
-### Login
-
+### 🔑 Login
 ![Login](img/login.png)
 
-### Forgot Password
-
+### 🔒 Forgot Password
 ![Forgot Password](img/forgot_password.png)
 
-### Register
-
+### 📝 Register
 ![Register](img/register.png)
 
 ---
 
-### Admin Dashboard
+### 👨‍💼 Admin Dashboard
 
 ![Dashboard](img/dashboard_stats.png)
 
@@ -144,7 +172,7 @@ It provides:
 
 ---
 
-### Admin Management
+### ⚙️ Admin Management
 
 ![Manage Requests](img/gestion_demandes.png)
 
@@ -152,7 +180,7 @@ It provides:
 
 ---
 
-### Student Panel
+### 🎓 Student Panel
 
 ![My Complaints](img/mes_reclamations.png)
 
@@ -162,22 +190,22 @@ It provides:
 
 ## 🛠 Tech Stack
 
-| Layer        | Technology            |
-| ------------ | --------------------- |
-| Language     | Java (JDK 17+)        |
-| UI           | Java Swing            |
-| Database     | MySQL 8               |
-| DB Name      | gestion_handicap_univ |
-| Connection   | JDBC                  |
-| Architecture | MVC                   |
-| IDE          | NetBeans              |
-| Security     | SHA-256               |
+| Layer | Technology |
+|------|-----------|
+| Language | Java (JDK 17+) |
+| UI Framework | Java Swing |
+| Database | MySQL 8 |
+| DB Name | gestion_handicap_univ |
+| Connectivity | JDBC |
+| Architecture | MVC (Model–View–Controller) |
+| IDE | NetBeans |
+| Security | SHA-256 hashing |
 
 ---
 
 ## 🗄 Database Schema
 
-```
+``` id="schema01"
 gestion_handicap_univ
 ├── utilisateur (idUtilisateur, email, pwd, nom, role)
 ├── etudiant (idEtudiant, idUtilisateur, handicap, compteValide)
@@ -185,7 +213,7 @@ gestion_handicap_univ
 ├── demande (idDemande, desc, date, type, statut, idEtudiant)
 ├── reclamation (idRecla, date, desc, statut, action, idEtudiant)
 └── piecejustificatif (idPiece, nom, desc, dateAjout, chemin, idDemande)
-```
+````
 
 ### Enums
 
@@ -195,28 +223,12 @@ gestion_handicap_univ
 
 ---
 
-## ⚙️ Installation
+## 🚀 Usage Flow
 
-```bash
-git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
-```
-
-### Steps:
-
-1. Open phpMyAdmin
-2. Create database `gestion_handicap_univ`
-3. Import `gestion_handicap_univ.sql`
-4. Open project in NetBeans
-5. Run project OR use shortcut
-
----
-
-## Usage Flow
-
-1. Student registers
+1. Student creates account
 2. Admin validates account
 3. Student logs in
-4. Student submits requests/complaints
+4. Student submits requests / complaints
 5. Admin processes them
 6. Student tracks status
 
@@ -230,6 +242,8 @@ git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
 ---
 
 <div align="center">
+
 Made with ❤️ for UIR — Academic Year 2025/2026
+
 </div>
 
