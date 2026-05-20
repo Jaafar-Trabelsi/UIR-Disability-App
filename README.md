@@ -5,7 +5,6 @@
 
 ![Java](https://img.shields.io/badge/Java-Swing-orange?style=for-the-badge&logo=java)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
-![NetBeans](https://img.shields.io/badge/IDE-NetBeans-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
 > A Java desktop application designed to streamline the management of requests and complaints from students with disabilities at the University International Rabat.
@@ -17,12 +16,11 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [Prerequisites](#-prerequisites)
+- [Database Setup](#-database-setup)
+- [Launching the Application](#-launching-the-application)
 - [Features](#-features)
-- [img](#-img)
-- [Tech Stack](#-tech-stack)
-- [Database Schema](#-database-schema)
-- [Installation](#-installation)
-- [Usage](#-usage)
+- [Usage Workflow](#-usage-workflow)
 
 ---
 
@@ -30,182 +28,40 @@
 
 The **UIR Disability App** is a Java Swing desktop application built for the **2025/2026 academic year**. It provides two separate interfaces:
 
-- 👨‍💼 **Admin** — manages student accounts, requests, complaints, history and statistics
-- 🎓 **Student** — submits and tracks personal requests, complaints and history
+- 👨‍💼 **Admin** — manages student accounts, requests, complaints, history, and statistics.
+- 🎓 **Student** — submits and tracks personal requests, complaints, and history.
 
 ---
 
-## ✨ Features
-
-### 🔐 Authentication
-- Email/password login with role-based routing
-- SHA-256 password hashing
-- Remember Me (saved via `java.util.prefs.Preferences`)
-- Forgot Password — 3-step verification code flow
-- Student registration with disability description + PDF upload
-
-### 👨‍💼 Admin
-- Real-time statistics dashboard (users, requests, complaints, accounts)
-- Manage requests: validate, refuse, edit, export CSV
-- Manage complaints: update status, add admin response
-- Full history with reset and delete actions
-- Account management: list, validate, edit, delete users
-
-### 🎓 Student
-- Submit and manage personal requests (demandes)
-- Submit and manage personal complaints (réclamations)
-- View personal history of processed requests/complaints
+## 🛠 Prerequisites
+- **Java JDK 17+** (Ensure Java is installed in your system PATH).
+- **MySQL Server** (e.g., XAMPP, WAMP, or standalone MySQL).
 
 ---
 
-## 📸 img
+## 🗄 Database Setup
 
-### 🔑 Login
-![Login](img/login.png)
+To run this application, you must connect it to the database:
 
-### 🔒 Forgot Password
-![Forgot Password](img/forgot_password.png)
-
-### 📝 Create Account
-![Register](img/register.png)
-
----
-
-### 👨‍💼 Admin — Dashboard
-
-#### Statistiques générales
-![Dashboard](img/dashboard_stats.png)
-
-#### Demandes par statut
-![Demandes par statut](img/demandes_statut.png)
-
-#### Réclamations par statut
-![Réclamations par statut](img/reclamations_statut.png)
-
-#### Comptes utilisateurs
-![Comptes utilisateurs](img/comptes_utilisateurs.png)
+1. Start your **MySQL Server** (if using XAMPP, start Apache and MySQL).
+2. Open your browser and navigate to `http://localhost/phpmyadmin`.
+3. Create a new database named exactly: **`gestion_handicap_univ`**.
+4. With the database selected, click the **Import** tab.
+5. Click **Choose File** and select the `gestion_handicap_univ.sql` file provided in this folder.
+6. Click **Go** at the bottom to import the schema.
 
 ---
 
-### 👨‍💼 Admin — Gestion
+## 🚀 Launching the Application
 
-#### Gestion des demandes
-![Gestion des demandes](img/gestion_demandes.png)
+You can launch the app in two ways:
 
-#### Gestion des réclamations
-![Gestion des réclamations](img/gestion_reclamations.png)
+### Method 1: Desktop Shortcut (Recommended)
+Double-click the file **`Disability_App_Java.lnk`**.
+* *Note:* This is a Windows Shortcut configured to execute the main application located at: 
+`target/devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
----
-
-### 👨‍💼 Admin — Comptes
-
-#### Liste des comptes
-![Liste des comptes](img/liste_comptes.png)
-
-#### Valider un compte
-![Valider un compte](img/valider_compte.png)
-
-#### Modifier un compte
-![Modifier un compte](img/modifier_compte.png)
-
-#### Supprimer un compte
-![Supprimer un compte](img/supprimer_compte.png)
-
----
-
-### 🎓 Student Interface
-
-#### Mes Réclamations
-![Mes Réclamations](img/mes_reclamations.png)
-
-#### Historique
-![Historique Étudiant](img/historique_etudiant.png)
-
----
-
-## 🛠 Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Language | Java (JDK 17+) |
-| UI Framework | Java Swing (custom painted components) |
-| Database | MySQL 8 — `gestion_handicap_univ` |
-| DB Connection | JDBC — `DatabaseConnection` singleton |
-| Architecture | MVC (model / controller DAO / Views) |
-| IDE | Apache NetBeans |
-| Security | SHA-256 password hashing |
-
----
-
-## 🗄 Database Schema
-
-```
-gestion_handicap_univ
-├── utilisateur       (idUtilisateur, email, pwd, nom, role)
-├── etudiant          (idEtudiant, idUtilisateur, handicap, compteValide)
-├── admin             (idAdmin, idUtilisateur, departement)
-├── demande           (idDemande, desc, date, type, statut, idEtudiant)
-├── reclamation       (idRecla, date, desc, statut, action, idEtudiant)
-└── piecejustificatif (idPiece, nom, desc, dateAjout, chemin, idDemande)
-```
-
-**Enums:**
-- `TypeDemande`: `AMENAGEMENT_EXAMEN` · `ACCESSIBILITE` · `ACCOMPAGNEMENT` · `AUTRE`
-- `StatutDemande`: `EN_COURS` · `ACCEPTEE` · `REFUSEE`
-- `StatutReclamation`: `EN_ATTENTE` · `EN_TRAITEMENT` · `RESOLUE` · `REJETEE`
-
----
-
-## ⚙️ Installation
-
-### Prerequisites
-- Java JDK 17+
-- MySQL Server on `localhost:3306`
-- Apache NetBeans (or any Java IDE)
-
-### Steps
-
+### Method 2: Command Line
+If the shortcut is not working, open your terminal (CMD or PowerShell) in this folder and run:
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Jaafar-Trabelsi/University-Disability-Platform.git
-
-# 2. Import the database
-# Open phpMyAdmin → gestion_handicap_univ → Import → gestion_handicap_univ.sql
-
-# 3. Open project in NetBeans
-# File → Open Project → select the cloned folder
-
-# 4. Build & Run
-# Run → Run Project (LoginFrame is the entry point)
-```
-
-### Default Admin Credentials
-```
-Email    : admin@uir.ac.ma
-Password : (set during DB import)
-Role     : ADMIN
-```
-
----
-
-## 🚀 Usage
-
-1. **Students** register via "Create a New Account" — account starts as `En attente`
-2. **Admin** validates the account via *Gestion des comptes → Valider un compte*
-3. **Student** can now log in and submit requests or complaints
-4. **Admin** processes them via *Gestion des demandes* / *Gestion des réclamations*
-
----
-
-## 👥 Authors
-
-- **Jaafar Trabelsi** — [GitHub](https://github.com/Jaafar-Trabelsi)
-- **conqueror31** - [GitHub](https://github.com/conqueror31)
----
-
-<div align="center">
-Made with ❤️ for UIR — Academic Year 2025/2026
-</div>
-=======
-# UIR-Disability-App
->>>>>>> ba61cb6bb1979d9d62536dea29e0ae27fdf7d6a0
+java -jar target/devhandicaprecuni-1.0-SNAPSHOT-jar-with-dependencies.jar
