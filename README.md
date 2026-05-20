@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # 🎓 UIR Disability App
@@ -206,3 +207,6 @@ Role     : ADMIN
 <div align="center">
 Made with ❤️ for UIR — Academic Year 2025/2026
 </div>
+=======
+# UIR-Disability-App
+>>>>>>> ba61cb6bb1979d9d62536dea29e0ae27fdf7d6a0
